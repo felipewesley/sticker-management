@@ -1,16 +1,16 @@
+import { AppStartup } from 'core/startup/startup';
 import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
-
-dotenv.config();
+// import dotenv from 'dotenv';
 
 const app: Express = express();
+
+// dotenv.config();
+
 const port = process.env.PORT ?? 3000;
 
-app.get('/', (req: Request, res: Response) => {
-
-    res.send('Express + TypeScript Server');
-
-});
+// Register routes
+const startup = new AppStartup(app);
+startup.registerRoutes();
 
 app.listen(port, () => {
 
