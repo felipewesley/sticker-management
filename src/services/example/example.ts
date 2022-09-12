@@ -1,4 +1,4 @@
-import { IExampleService } from "common/domain/services/example.interface";
+import { IExampleService } from "../../common/domain/services/example.interface";
 
 export class ExampleService implements IExampleService {
 

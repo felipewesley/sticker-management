@@ -1,5 +1,5 @@
-import { AppStartup } from 'core/startup/startup';
-import express, { Express, Request, Response } from 'express';
+import { AppStartup } from './src/core/startup/startup';
+import express, { Express } from 'express';
 // import dotenv from 'dotenv';
 
 const app: Express = express();

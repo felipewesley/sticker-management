@@ -3,7 +3,7 @@ import { Router } from "express";
 export type StartupType<T> = {
 
     basePath: string;
-    controller: T;
+    // controller: T;
     routes: Router;
 
 }

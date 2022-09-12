@@ -1,14 +1,17 @@
 import express from "express";
 
-import { ExampleControllerStartup } from "controllers/example";
-import { IExampleController } from "common/domain/controllers/example.interface";
+import { IExampleController } from "../../common/domain/controllers/example.interface";
+import { ExampleService } from "../../services/example/example";
+import { ExampleController } from "./controller";
+
+const exampleService = new ExampleService();
+
+const Controller: IExampleController = new ExampleController(exampleService);
 
 export const ExampleControllerRoutes = express.Router();
-
-const Controller: IExampleController = ExampleControllerStartup.controller;
 
 /**
  * Example method
  * - GET
  */
-ExampleControllerRoutes.get('/', Controller.getExample);
+ExampleControllerRoutes.get('/', Controller.getExample.bind(Controller));

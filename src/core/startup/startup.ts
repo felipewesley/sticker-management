@@ -1,6 +1,6 @@
 import { Express } from "express";
 
-import { ExampleControllerStartup } from "controllers/example";
+import { ExampleControllerStartup } from "../../controllers/example/startup";
 
 export class AppStartup {
 
