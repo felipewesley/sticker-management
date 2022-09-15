@@ -4,7 +4,7 @@ import { IIdentifiable } from "../../interfaces/identifiable.interface";
 import { ICountryModel } from "../country/country.model";
 import { PlayerPositionEnum } from "../../enums/player/player-position.enum";
 
-export interface IPlayerDetailModel extends IIdentifiable, INameable {
+export interface IPlayerDetailModel extends IIdentifiable<string>, INameable {
 
     position: PlayerPositionEnum;
     birthDate: Date;

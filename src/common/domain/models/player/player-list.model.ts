@@ -1,7 +1,7 @@
 import { IIdentifiable } from "../../interfaces/identifiable.interface";
 import { INameable } from "../../interfaces/nameable.interface";
 
-export interface IPlayerListModel extends IIdentifiable, INameable {
+export interface IPlayerListModel extends IIdentifiable<string>, INameable {
 
     countryId: string;
     hasExtraCromo: boolean;
