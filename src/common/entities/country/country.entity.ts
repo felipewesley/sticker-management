@@ -7,7 +7,7 @@ export interface CountryEntity {
     prefix: string;
     name: string;
     teamName: string;
-    teamPictureId: string;
+    teamPictureId?: string;
     group: CountryGroup;
 
 }
