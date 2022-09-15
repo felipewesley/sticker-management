@@ -1,3 +1,3 @@
-export interface IIdentifiable {
-    id: string;
+export interface IIdentifiable<T> {
+    id: T;
 }
