@@ -1,13 +1,12 @@
 import { StartupType } from "../../core/startup/startup.type";
 
-import { ExampleController } from "./controller";
 import { ExampleControllerRoutes } from "./routes";
+import { IExampleController } from "../../common/domain/controllers/example/example.interface";
 
-import { ExampleService } from "../../services/example/example";
-import { IExampleController } from "../../common/domain/controllers/example.interface";
-
-// const exampleService = null;
-
+/**
+ * ## Example Controller Startup
+ * - Startup of `ExampleController`
+ */
 export const ExampleControllerStartup: StartupType<IExampleController> = {
 
     basePath: '/example',
