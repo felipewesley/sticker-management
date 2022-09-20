@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 
-import { BaseController } from "../../common/controller/base-controller";
+import { BaseController } from "../../common/base/controller/base-controller";
 import { IExampleService } from "../../common/domain/services/example/example.interface";
 import { IExampleController } from "../../common/domain/controllers/example/example.interface";
 
