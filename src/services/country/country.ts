@@ -1,5 +1,5 @@
 import { CountryEnum } from "../../common/domain/enums/country/country.enum";
-import { ICountryModel } from "../../common/domain/models/country/country.model";
+import { CountryModel, ICountryModel } from "../../common/domain/models/country/country.model";
 import { ICountryRepository } from "../../common/domain/repositories/country/country.interface";
 import { ICountryService } from "../../common/domain/services/country/country.interface";
 
@@ -23,32 +23,38 @@ export class CountryService implements ICountryService {
 
     public async getCountryById(countryId: CountryEnum): Promise<ICountryModel> {
 
-        console.log('id =>', countryId);
+        const country = await this._countryRepository.getCountryById(countryId);
 
-        return {
-            id: countryId,
-            group: 'A',
-            name: 'Brasil',
-            prefix: 'BRA',
-            teamName: 'Federação Brasileira De Futebol'
-        };
+        if (!country)
+            throw new Error(`The requested country was not found`);
 
-        // throw new Error("Method not implemented.");
+        const model = new CountryModel();
+
+        model.id = country.id;
+        model.name = country.name;
+        model.group = country.group;
+        model.prefix = country.prefix;
+        model.teamName = country.teamName;
+
+        return model;
     }
 
     public async getCountryByPrefix(prefix: string): Promise<ICountryModel> {
 
-        console.log('prefix =>', prefix);
+        const country = await this._countryRepository.getCountryByPrefix(prefix);
 
-        return {
-            id: 1,
-            group: 'A',
-            name: 'Brasil',
-            prefix: prefix,
-            teamName: 'Federação Brasileira De Futebol'
-        };
+        if (!country)
+            throw new Error(`The requested country was not found`);
 
-        // throw new Error("Method not implemented.");
+        const model = new CountryModel();
+
+        model.id = country.id;
+        model.name = country.name;
+        model.group = country.group;
+        model.prefix = country.prefix;
+        model.teamName = country.teamName;
+
+        return model;
     }
     
 }
