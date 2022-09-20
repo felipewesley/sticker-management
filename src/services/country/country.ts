@@ -1,5 +1,6 @@
 import { CountryEnum } from "../../common/domain/enums/country/country.enum";
 import { ICountryModel } from "../../common/domain/models/country/country.model";
+import { ICountryRepository } from "../../common/domain/repositories/country/country.interface";
 import { ICountryService } from "../../common/domain/services/country/country.interface";
 
 /**
@@ -12,7 +13,9 @@ export class CountryService implements ICountryService {
     /**
      * Country Service constructor
      */
-    constructor() { }
+    constructor(
+        private _countryRepository: ICountryRepository
+    ) { }
 
     // ----------------------------------------------------------------------------------------------------
     // @ Public methods

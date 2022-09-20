@@ -4,13 +4,19 @@ import { CountryController } from "./controller";
 import { ICountryController } from "../../common/domain/controllers/country/country.interface";
 
 import { CountryService } from "../../services/country/country";
-
+import { CountryRepository } from "../../repositories/country/country";
 
 // ----------------------------------------------------------------------------------------------------
-// @ Dependencies
+// @ Dependencies - Repositories
 // ----------------------------------------------------------------------------------------------------
 
-const countryService = new CountryService();
+const countryRepository = new CountryRepository();
+
+// ----------------------------------------------------------------------------------------------------
+// @ Dependencies - Services
+// ----------------------------------------------------------------------------------------------------
+
+const countryService = new CountryService(countryRepository);
 
 // ----------------------------------------------------------------------------------------------------
 // @ Controller and router instance
