@@ -26,7 +26,10 @@ export class CountryService implements ICountryService {
         const country = await this._countryRepository.getCountryById(countryId);
 
         if (!country)
-            throw new Error(`The requested country was not found`);
+        {
+            // throw new Error(`The requested country was not found`);
+            return null;
+        }
 
         const model = new CountryModel();
 
@@ -44,7 +47,10 @@ export class CountryService implements ICountryService {
         const country = await this._countryRepository.getCountryByPrefix(prefix);
 
         if (!country)
-            throw new Error(`The requested country was not found`);
+        {
+            // throw new Error(`The requested country was not found`);
+            return null;
+        }
 
         const model = new CountryModel();
 
