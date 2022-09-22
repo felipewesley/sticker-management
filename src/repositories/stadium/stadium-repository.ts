@@ -1,6 +1,6 @@
 import { BaseRepository } from "../../common/base/repository/base-repository";
 import { IStadiumRepository } from "../../common/domain/repositories/stadium/stadium-repository.interface";
-import { StadiumEntity } from "../../common/entities/stadium/stadium.entity";
+import { StadiumEntity } from "../../domain/entities/stadium/stadium.entity";
 
 /**
  * ### Stadium Repository

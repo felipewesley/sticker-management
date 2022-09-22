@@ -1,4 +1,4 @@
-import { StadiumEntity } from "../../../entities/stadium/stadium.entity";
+import { StadiumEntity } from "../../../../domain/entities/stadium/stadium.entity";
 
 /**
  * ### Stadium Repository Actions

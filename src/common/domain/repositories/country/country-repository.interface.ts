@@ -1,4 +1,4 @@
-import { CountryEntity } from "../../../entities/country/country.entity";
+import { CountryEntity } from "../../../../domain/entities/country/country.entity";
 import { CountryEnum } from "../../enums/country/country.enum";
 
 /**

@@ -1,4 +1,4 @@
-import { CountryGroup } from "../../types/country-group.type";
+import { CountryGroup } from "../../../../domain/types/country-group.type";
 import { INameable } from "../../interfaces/nameable.interface";
 import { IIdentifiable } from "../../interfaces/identifiable.interface";
 import { CountryEnum } from "../../enums/country/country.enum";
