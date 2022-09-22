@@ -1,4 +1,4 @@
-import { StartupType } from "../../core/startup/startup.type";
+import { StartupType } from "../../startup/startup.type";
 
 import { StadiumControllerRoutes } from "./routes";
 import { IStadiumController } from "../../common/domain/controllers/stadium/stadium-controller.interface";

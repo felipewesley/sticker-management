@@ -1,4 +1,4 @@
-import { AppStartup } from './src/core/startup/startup';
+import { AppStartup } from './src/startup';
 import express, { Express } from 'express';
 import { errorHandler } from './src/core/handlers/error.handler';
 // import dotenv from 'dotenv';

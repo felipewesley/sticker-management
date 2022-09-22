@@ -1,7 +1,7 @@
 import { Express } from "express";
 
-import { CountryControllerStartup } from "../../controllers/country/startup";
-import { StadiumControllerStartup } from "../../controllers/stadium/startup";
+import { CountryControllerStartup } from "../controllers/country/startup";
+import { StadiumControllerStartup } from "../controllers/stadium/startup";
 
 /**
  * # App Startup
