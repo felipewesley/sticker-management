@@ -1,5 +1,5 @@
 import { CountryEntity } from "../../../../domain/entities/country/country.entity";
-import { CountryEnum } from "../../enums/country/country.enum";
+import { CountryEnum } from "../../../../domain/enums/country/country.enum";
 
 /**
  * ### Country Repository Actions

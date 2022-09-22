@@ -3,7 +3,7 @@ import { NextFunction, Request, Response } from "express";
 import { BaseController } from "../../common/base/controller/base-controller";
 import { ICountryController } from "../../common/domain/controllers/country/country-controller.interface";
 import { ICountryService } from "../../common/domain/services/country/country-service.interface";
-import { CountryEnum } from "../../common/domain/enums/country/country.enum";
+import { CountryEnum } from "../../domain/enums/country/country.enum";
 
 /**
  * ### Country Controller

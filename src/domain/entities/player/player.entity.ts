@@ -1,5 +1,5 @@
-import { CountryEnum } from "../../../common/domain/enums/country/country.enum";
-import { PlayerPositionEnum } from "../../../common/domain/enums/player/player-position.enum";
+import { CountryEnum } from "../../enums/country/country.enum";
+import { PlayerPositionEnum } from "../../enums/player/player-position.enum";
 
 export interface PlayerEntity {
 

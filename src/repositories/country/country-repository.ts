@@ -1,4 +1,4 @@
-import { CountryEnum } from "../../common/domain/enums/country/country.enum";
+import { CountryEnum } from "../../domain/enums/country/country.enum";
 import { CountryEntity } from "../../domain/entities/country/country.entity";
 import { ICountryRepository } from "../../common/domain/repositories/country/country-repository.interface";
 import { BaseRepository } from "../../common/base/repository/base-repository";

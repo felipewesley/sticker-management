@@ -1,5 +1,5 @@
 import { DatabaseSchema } from "../common/db/db.type";
-import { CountryEnum } from "../common/domain/enums/country/country.enum";
+import { CountryEnum } from "../domain/enums/country/country.enum";
 
 /**
  * ### Mock Database

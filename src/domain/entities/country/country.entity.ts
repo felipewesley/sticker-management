@@ -1,4 +1,4 @@
-import { CountryEnum } from "../../../common/domain/enums/country/country.enum";
+import { CountryEnum } from "../../enums/country/country.enum";
 import { CountryGroup } from "../../types/country-group.type";
 
 export interface CountryEntity {

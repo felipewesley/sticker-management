@@ -1,4 +1,4 @@
-import { CountryEnum } from "../../enums/country/country.enum";
+import { CountryEnum } from "../../../../domain/enums/country/country.enum";
 import { ICountryModel } from "../../models/country/country.model";
 
 /**
