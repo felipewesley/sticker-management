@@ -1,6 +1,6 @@
 import { IStadiumModel } from "../../common/domain/models/stadium/stadium.model";
-import { IStadiumRepository } from "../../common/domain/repositories/stadium/stadium.interface";
-import { IStadiumService } from "../../common/domain/services/stadium/stadium.interface";
+import { IStadiumRepository } from "../../common/domain/repositories/stadium/stadium-repository.interface";
+import { IStadiumService } from "../../common/domain/services/stadium/stadium-service.interface";
 
 /**
  * ### Stadium Service

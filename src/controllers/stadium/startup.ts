@@ -1,7 +1,7 @@
 import { StartupType } from "../../core/startup/startup.type";
 
 import { StadiumControllerRoutes } from "./routes";
-import { IStadiumController } from "../../common/domain/controllers/stadium/stadium.interface";
+import { IStadiumController } from "../../common/domain/controllers/stadium/stadium-controller.interface";
 
 /**
  * ## Stadium Controller Startup

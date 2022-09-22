@@ -1,7 +1,7 @@
 import { CountryEnum } from "../../common/domain/enums/country/country.enum";
 import { CountryModel, ICountryModel } from "../../common/domain/models/country/country.model";
-import { ICountryRepository } from "../../common/domain/repositories/country/country.interface";
-import { ICountryService } from "../../common/domain/services/country/country.interface";
+import { ICountryRepository } from "../../common/domain/repositories/country/country-repository.interface";
+import { ICountryService } from "../../common/domain/services/country/country-service.interface";
 
 /**
  * ### Country Service

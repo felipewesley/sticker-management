@@ -1,10 +1,10 @@
 import express from "express";
 
 import { CountryController } from "./controller";
-import { ICountryController } from "../../common/domain/controllers/country/country.interface";
+import { ICountryController } from "../../common/domain/controllers/country/country-controller.interface";
 
-import { CountryService } from "../../services/country/country";
-import { CountryRepository } from "../../repositories/country/country";
+import { CountryService } from "../../services/country/country-service";
+import { CountryRepository } from "../../repositories/country/country-repository";
 
 // ----------------------------------------------------------------------------------------------------
 // @ Dependencies - Repositories

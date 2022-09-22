@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 
 import { BaseController } from "../../common/base/controller/base-controller";
-import { IStadiumController } from "../../common/domain/controllers/stadium/stadium.interface";
-import { IStadiumService } from "../../common/domain/services/stadium/stadium.interface";
+import { IStadiumController } from "../../common/domain/controllers/stadium/stadium-controller.interface";
+import { IStadiumService } from "../../common/domain/services/stadium/stadium-service.interface";
 
 /**
  * ### Stadium Controller

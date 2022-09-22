@@ -1,7 +1,7 @@
 import express from "express";
-import { IStadiumController } from "../../common/domain/controllers/stadium/stadium.interface";
-import { StadiumRepository } from "../../repositories/stadium/stadium";
-import { StadiumService } from "../../services/stadium/stadium";
+import { IStadiumController } from "../../common/domain/controllers/stadium/stadium-controller.interface";
+import { StadiumRepository } from "../../repositories/stadium/stadium-repository";
+import { StadiumService } from "../../services/stadium/stadium-service";
 import { StadiumController } from "./controller";
 
 // ----------------------------------------------------------------------------------------------------

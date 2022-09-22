@@ -1,7 +1,7 @@
 import { StartupType } from "../../core/startup/startup.type";
 
 import { CountryControllerRoutes } from "./routes";
-import { ICountryController } from "../../common/domain/controllers/country/country.interface";
+import { ICountryController } from "../../common/domain/controllers/country/country-controller.interface";
 
 /**
  * ## Country Controller Startup
