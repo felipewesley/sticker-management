@@ -30,10 +30,11 @@ export class CountryController extends BaseController implements ICountryControl
 
     public async getCountryById(req: Request, res: Response): Promise<void> {
 
-        const countryId: CountryEnum = parseInt(req.params['countryId']);
-
+        
         try
         {
+            const countryId: CountryEnum = parseInt(req.params['countryId']);
+            
             const country = await this._service.getCountryById(countryId);
     
             res.json(country);

@@ -22,7 +22,9 @@ export class StadiumRepository extends BaseRepository<StadiumEntity> implements 
 
     public async getStadiumById(stadiumId: string): Promise<StadiumEntity> {
 
-        return;
+        const stadium = this.getAll().find(s => s.id == stadiumId);
+
+        return stadium;
     }
 
 }

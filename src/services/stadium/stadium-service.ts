@@ -1,4 +1,4 @@
-import { IStadiumModel } from "../../common/domain/models/stadium/stadium.model";
+import { IStadiumModel, StadiumModel } from "../../common/domain/models/stadium/stadium.model";
 import { IStadiumRepository } from "../../common/domain/repositories/stadium/stadium-repository.interface";
 import { IStadiumService } from "../../common/domain/services/stadium/stadium-service.interface";
 
@@ -22,7 +22,23 @@ export class StadiumService implements IStadiumService {
     
     public async getStadiumById(stadiumId: string): Promise<IStadiumModel> {
 
-        throw new Error("Method not implemented.");
+        const stadium = await this._stadiumRepository.getStadiumById(stadiumId);
+
+        if (!stadium)
+        {
+            throw new Error(`The requested stadium was not found`);
+            // return null;
+        }
+
+        const model = new StadiumModel();
+
+        model.id = stadium.id;
+        model.name = stadium.name;
+        model.capacity = stadium.capacity;
+        model.openingMatch = stadium.openingMatch;
+        model.finalMatch = stadium.finalMatch;
+
+        return model;
     }
     
 }
