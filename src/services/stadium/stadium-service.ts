@@ -1,6 +1,7 @@
 import { IStadiumModel, StadiumModel } from "../../common/domain/models/stadium/stadium.model";
 import { IStadiumRepository } from "../../common/domain/repositories/stadium/stadium-repository.interface";
 import { IStadiumService } from "../../common/domain/services/stadium/stadium-service.interface";
+import { NotFoundError } from "../../core/errors/not-found.error";
 
 /**
  * ### Stadium Service
@@ -25,10 +26,7 @@ export class StadiumService implements IStadiumService {
         const stadium = await this._stadiumRepository.getStadiumById(stadiumId);
 
         if (!stadium)
-        {
-            throw new Error(`The requested stadium was not found`);
-            // return null;
-        }
+            throw new NotFoundError(`The requested stadium was not found`);
 
         const model = new StadiumModel();
 
