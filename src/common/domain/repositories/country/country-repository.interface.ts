@@ -10,10 +10,10 @@ import { CountryEnum } from "../../enums/country/country.enum";
 export interface ICountryRepository {
 
     /**
-     * Get country by id (page number)
-     * @param countryId 
+     * Get country by page number
+     * @param pageNumber 
      */
-    getCountryById(countryId: CountryEnum): Promise<CountryEntity>;
+    getCountryByPageNumber(pageNumber: CountryEnum): Promise<CountryEntity>;
 
     /**
      * Get country by prefix

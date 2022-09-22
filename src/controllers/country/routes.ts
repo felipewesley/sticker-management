@@ -31,12 +31,12 @@ export const CountryControllerRoutes = express.Router();
 
 /**
  * GET
- * Get country details (by Id)
+ * Get country details (by prefix)
  */
-CountryControllerRoutes.get('/id/:countryId', Controller.getCountryById.bind(Controller));
+CountryControllerRoutes.get('/:prefix', Controller.getCountryByPrefix.bind(Controller));
 
 /**
  * GET
- * Get country details (by prefix)
+ * Get country details page number
  */
-CountryControllerRoutes.get('/prefix/:prefix', Controller.getCountryByPrefix.bind(Controller));
+CountryControllerRoutes.get('/per-page/:pageNumber', Controller.getCountryByPageNumber.bind(Controller));

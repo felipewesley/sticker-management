@@ -10,10 +10,10 @@ import { ICountryModel } from "../../models/country/country.model";
 export interface ICountryService {
 
     /**
-     * Get country by id - page number
-     * @param countryId 
+     * Get country by page number
+     * @param pageNumber 
      */
-    getCountryById(countryId: CountryEnum): Promise<ICountryModel>;
+    getCountryByPageNumber(pageNumber: CountryEnum): Promise<ICountryModel>;
 
     /**
      * Get country by prefix

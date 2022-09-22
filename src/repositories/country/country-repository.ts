@@ -21,14 +21,14 @@ export class CountryRepository extends BaseRepository<CountryEntity> implements 
     // @ Public methods
     // ----------------------------------------------------------------------------------------------------
 
-    public async getCountryById(countryId: CountryEnum): Promise<CountryEntity> {
+    public async getCountryByPageNumber(pageNumber: CountryEnum): Promise<CountryEntity> {
 
-        const country = this.getAll().find(c => c.id == countryId);
+        const country = this.getAll().find(c => c.id == pageNumber);
 
         if (country)
             return country;
 
-        const countryInSecondayPage = this.getAll().find(c => (c.id + 1) == countryId);
+        const countryInSecondayPage = this.getAll().find(c => (c.id + 1) == pageNumber);
 
         if (countryInSecondayPage)
             return countryInSecondayPage;

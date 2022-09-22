@@ -9,12 +9,12 @@ import { NextFunction, Request, Response } from "express";
 export interface ICountryController {
 
     /**
-     * Get a country details by id - page number
+     * Get a country details by page number
      * @param req 
      * @param res 
      * @param next 
      */
-    getCountryById(req: Request, res: Response, next?: NextFunction): Promise<void>;
+    getCountryByPageNumber(req: Request, res: Response, next?: NextFunction): Promise<void>;
 
     /**
      * Get a country details by prefix

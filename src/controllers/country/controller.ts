@@ -24,16 +24,16 @@ export class CountryController extends BaseController implements ICountryControl
     }
 
     // ----------------------------------------------------------------------------------------------------
-    // @ Get country by Id
+    // @ Get country by page number
     // ----------------------------------------------------------------------------------------------------
 
-    public async getCountryById(req: Request, res: Response, next: NextFunction): Promise<void> {
+    public async getCountryByPageNumber(req: Request, res: Response, next: NextFunction): Promise<void> {
 
         try
         {
-            const countryId: CountryEnum = parseInt(req.params['countryId']);
+            const pageNumber: CountryEnum = parseInt(req.params['pageNumber']);
             
-            const country = await this._service.getCountryById(countryId);
+            const country = await this._service.getCountryByPageNumber(pageNumber);
     
             res.json(country);
         }

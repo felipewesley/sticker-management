@@ -2,6 +2,7 @@ import { CountryEnum } from "../../common/domain/enums/country/country.enum";
 import { CountryModel, ICountryModel } from "../../common/domain/models/country/country.model";
 import { ICountryRepository } from "../../common/domain/repositories/country/country-repository.interface";
 import { ICountryService } from "../../common/domain/services/country/country-service.interface";
+import { NotFoundError } from "../../core/errors/not-found.error";
 
 /**
  * ### Country Service
@@ -21,15 +22,12 @@ export class CountryService implements ICountryService {
     // @ Public methods
     // ----------------------------------------------------------------------------------------------------
 
-    public async getCountryById(countryId: CountryEnum): Promise<ICountryModel> {
+    public async getCountryByPageNumber(pageNumber: CountryEnum): Promise<ICountryModel> {
 
-        const country = await this._countryRepository.getCountryById(countryId);
+        const country = await this._countryRepository.getCountryByPageNumber(pageNumber);
 
         if (!country)
-        {
-            throw new Error(`The requested country was not found`);
-            // return null;
-        }
+            throw new NotFoundError(`The requested country was not found`);
 
         const model = new CountryModel();
 
@@ -47,10 +45,7 @@ export class CountryService implements ICountryService {
         const country = await this._countryRepository.getCountryByPrefix(prefix);
 
         if (!country)
-        {
-            throw new Error(`The requested country was not found`);
-            // return null;
-        }
+            throw new NotFoundError(`The requested country was not found`);
 
         const model = new CountryModel();
 
