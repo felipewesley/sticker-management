@@ -248,7 +248,89 @@ export const DATABASE: DatabaseSchema = {
     // @ Stadiums
     //----------------------------------------------------------------------------------------------------
 
-    stadiums: [],
+    stadiums: [
+
+        {
+            id: 'FWC8',
+            name: 'Ahmad Bin Ali Stadium',
+            capacity: 40000,
+            finalMatch: false,
+            openingMatch: false
+        },
+
+        {
+            id: 'FWC9',
+            name: 'Al Janoub Stadium',
+            capacity: 40000,
+            finalMatch: false,
+            openingMatch: false
+        },
+
+        {
+            id: 'FWC10',
+            name: 'Al Thumama Stadium',
+            capacity: 40000,
+            finalMatch: false,
+            openingMatch: false
+        },
+
+        {
+            id: 'FWC11',
+            name: 'Education City Stadium',
+            capacity: 40000,
+            finalMatch: false,
+            openingMatch: false
+        },
+
+        {
+            id: 'FWC12',
+            name: 'Khalifa International Stadium',
+            capacity: 40000,
+            finalMatch: false,
+            openingMatch: false
+        },
+
+        {
+            id: 'FWC13',
+            name: 'Stadium 974',
+            capacity: 40000,
+            finalMatch: false,
+            openingMatch: false
+        },
+
+        {
+            id: 'FWC14',
+            name: 'Al Bayt Stadium',
+            capacity: 60000,
+            finalMatch: false,
+            openingMatch: true
+        },
+
+        {
+            id: 'FWC15',
+            name: 'Al Bayt Stadium',
+            capacity: 60000,
+            finalMatch: false,
+            openingMatch: true
+        },
+
+        {
+            id: 'FWC16',
+            name: 'Lusail Stadium',
+            capacity: 80000,
+            finalMatch: true,
+            openingMatch: false
+        },
+
+        {
+            id: 'FWC17',
+            name: 'Lusail Stadium',
+            capacity: 80000,
+            finalMatch: true,
+            openingMatch: false
+        },
+
+    ],
 
     //----------------------------------------------------------------------------------------------------
     // @ Players
