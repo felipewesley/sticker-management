@@ -1,10 +1,9 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 
 import { BaseController } from "../../common/base/controller/base-controller";
 import { ICountryController } from "../../common/domain/controllers/country/country-controller.interface";
 import { ICountryService } from "../../common/domain/services/country/country-service.interface";
 import { CountryEnum } from "../../common/domain/enums/country/country.enum";
-import { HttpStatusCode } from "../../common/types/enums/http-status-code.enum";
 
 /**
  * ### Country Controller
@@ -28,9 +27,8 @@ export class CountryController extends BaseController implements ICountryControl
     // @ Get country by Id
     // ----------------------------------------------------------------------------------------------------
 
-    public async getCountryById(req: Request, res: Response): Promise<void> {
+    public async getCountryById(req: Request, res: Response, next: NextFunction): Promise<void> {
 
-        
         try
         {
             const countryId: CountryEnum = parseInt(req.params['countryId']);
@@ -41,7 +39,7 @@ export class CountryController extends BaseController implements ICountryControl
         }
         catch(error)
         {
-            res.status(HttpStatusCode.NotFound).json(`Requested country was not found`);
+            next(error);
         }
 
         return;
@@ -51,13 +49,20 @@ export class CountryController extends BaseController implements ICountryControl
     // @ Get country by prefix
     // ----------------------------------------------------------------------------------------------------
 
-    public async getCountryByPrefix(req: Request, res: Response): Promise<void> {
+    public async getCountryByPrefix(req: Request, res: Response, next: NextFunction): Promise<void> {
 
-        const countryPrefix: string = req.params['prefix']?.toString();
-
-        const country = await this._service.getCountryByPrefix(countryPrefix);
-
-        res.json(country);
+        try
+        {
+            const countryPrefix: string = req.params['prefix']?.toString();
+    
+            const country = await this._service.getCountryByPrefix(countryPrefix);
+    
+            res.json(country);
+        }
+        catch(error)
+        {
+            next(error);
+        }
 
         return;
     }

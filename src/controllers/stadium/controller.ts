@@ -1,9 +1,8 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 
 import { BaseController } from "../../common/base/controller/base-controller";
 import { IStadiumController } from "../../common/domain/controllers/stadium/stadium-controller.interface";
 import { IStadiumService } from "../../common/domain/services/stadium/stadium-service.interface";
-import { HttpStatusCode } from "../../common/types/enums/http-status-code.enum";
 
 /**
  * ### Stadium Controller
@@ -27,19 +26,19 @@ export class StadiumController extends BaseController implements IStadiumControl
     // @ Get stadium by Id
     // ----------------------------------------------------------------------------------------------------
 
-    public async getStadiumById(req: Request, res: Response): Promise<void> {
+    public async getStadiumById(req: Request, res: Response, next: NextFunction): Promise<void> {
 
         try
         {
-            const stadiumId: string = req.params['countryId']?.toString();
+            const stadiumId: string = req.params['stadiumId']?.toString();
 
-            const stadium = this._service.getStadiumById(stadiumId);
+            const stadium = await this._service.getStadiumById(stadiumId);
 
             res.json(stadium);
         }
         catch(error)
         {
-            res.status(HttpStatusCode.NotFound).json(`Requested stadium was not found`);
+            next(error);
         }
 
         return;
