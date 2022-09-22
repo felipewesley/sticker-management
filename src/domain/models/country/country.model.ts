@@ -1,6 +1,6 @@
 import { CountryGroup } from "../../types/country-group.type";
-import { INameable } from "../../../common/domain/interfaces/nameable.interface";
-import { IIdentifiable } from "../../../common/domain/interfaces/identifiable.interface";
+import { INameable } from "../../interfaces/nameable.interface";
+import { IIdentifiable } from "../../interfaces/identifiable.interface";
 import { CountryEnum } from "../../enums/country/country.enum";
 
 export interface ICountryModel extends IIdentifiable<CountryEnum>, INameable {

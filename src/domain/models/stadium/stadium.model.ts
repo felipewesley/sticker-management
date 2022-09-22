@@ -1,5 +1,5 @@
-import { INameable } from "../../../common/domain/interfaces/nameable.interface";
-import { IIdentifiable } from "../../../common/domain/interfaces/identifiable.interface";
+import { INameable } from "../../interfaces/nameable.interface";
+import { IIdentifiable } from "../../interfaces/identifiable.interface";
 
 export interface IStadiumModel extends IIdentifiable<string>, INameable {
 
