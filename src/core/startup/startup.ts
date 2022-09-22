@@ -1,6 +1,5 @@
 import { Express } from "express";
 
-import { ExampleControllerStartup } from "../../controllers/example/startup";
 import { CountryControllerStartup } from "../../controllers/country/startup";
 import { StadiumControllerStartup } from "../../controllers/stadium/startup";
 
@@ -19,12 +18,6 @@ export class AppStartup {
     // ----------------------------------------------------------------------------------------------------
 
     public registerRoutes(): void {
-
-        // ----------------------------------------------------------------------------------------------------
-        // @ Example controller routes
-        // ----------------------------------------------------------------------------------------------------
-
-        this.client.use(ExampleControllerStartup.basePath, ExampleControllerStartup.routes);
 
         // ----------------------------------------------------------------------------------------------------
         // @ Country controller routes
