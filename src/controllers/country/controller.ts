@@ -4,6 +4,7 @@ import { BaseController } from "../../common/base/controller/base-controller";
 import { ICountryController } from "../../common/domain/controllers/country/country.interface";
 import { ICountryService } from "../../common/domain/services/country/country.interface";
 import { CountryEnum } from "../../common/domain/enums/country/country.enum";
+import { HttpStatusCode } from "../../common/types/enums/http-status-code.enum";
 
 /**
  * ### Country Controller
@@ -31,9 +32,16 @@ export class CountryController extends BaseController implements ICountryControl
 
         const countryId: CountryEnum = parseInt(req.params['countryId']);
 
-        const country = await this._service.getCountryById(countryId);
-
-        res.json(country);
+        try
+        {
+            const country = await this._service.getCountryById(countryId);
+    
+            res.json(country);
+        }
+        catch(error)
+        {
+            res.status(HttpStatusCode.NotFound).json(`Requested country was not found`);
+        }
 
         return;
     }

@@ -27,8 +27,8 @@ export class CountryService implements ICountryService {
 
         if (!country)
         {
-            // throw new Error(`The requested country was not found`);
-            return null;
+            throw new Error(`The requested country was not found`);
+            // return null;
         }
 
         const model = new CountryModel();
@@ -48,8 +48,8 @@ export class CountryService implements ICountryService {
 
         if (!country)
         {
-            // throw new Error(`The requested country was not found`);
-            return null;
+            throw new Error(`The requested country was not found`);
+            // return null;
         }
 
         const model = new CountryModel();
