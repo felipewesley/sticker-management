@@ -1,5 +1,5 @@
 import { DATABASE } from "../../../db";
-import { DatabaseSchema } from "../../db/db.type";
+import { DatabaseSchema } from "../../../domain/database/database.schema";
 
 /**
  * ### Base Repository

@@ -1,4 +1,4 @@
-import { DatabaseSchema } from "../common/db/db.type";
+import { DatabaseSchema } from "../domain/database/database.schema";
 import { CountryEnum } from "../domain/enums/country/country.enum";
 
 /**
