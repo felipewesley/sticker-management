@@ -1,4 +1,4 @@
-import { IStadiumModel } from "../../models/stadium/stadium.model";
+import { IStadiumModel } from "../../../../domain/models/stadium/stadium.model";
 
 /**
  * ### Stadium Service Actions

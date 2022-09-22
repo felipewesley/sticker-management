@@ -1,5 +1,5 @@
-import { IIdentifiable } from "../../interfaces/identifiable.interface";
-import { INameable } from "../../interfaces/nameable.interface";
+import { IIdentifiable } from "../../../common/domain/interfaces/identifiable.interface";
+import { INameable } from "../../../common/domain/interfaces/nameable.interface";
 
 export interface IPlayerListModel extends IIdentifiable<string>, INameable {
 

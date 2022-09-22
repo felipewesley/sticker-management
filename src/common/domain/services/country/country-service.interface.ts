@@ -1,5 +1,5 @@
 import { CountryEnum } from "../../../../domain/enums/country/country.enum";
-import { ICountryModel } from "../../models/country/country.model";
+import { ICountryModel } from "../../../../domain/models/country/country.model";
 
 /**
  * ### Country Service Actions

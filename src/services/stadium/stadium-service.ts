@@ -1,4 +1,4 @@
-import { IStadiumModel, StadiumModel } from "../../common/domain/models/stadium/stadium.model";
+import { IStadiumModel, StadiumModel } from "../../domain/models/stadium/stadium.model";
 import { IStadiumRepository } from "../../common/domain/repositories/stadium/stadium-repository.interface";
 import { IStadiumService } from "../../common/domain/services/stadium/stadium-service.interface";
 import { NotFoundError } from "../../core/errors/not-found.error";
