@@ -25,7 +25,15 @@ export class CountryRepository extends BaseRepository<CountryEntity> implements 
 
         const country = this.getAll().find(c => c.id == countryId);
 
-        return country;
+        if (country)
+            return country;
+
+        const countryInSecondayPage = this.getAll().find(c => (c.id + 1) == countryId);
+
+        if (countryInSecondayPage)
+            return countryInSecondayPage;
+
+        return null;
     }
 
     public async getCountryByPrefix(prefix: string): Promise<CountryEntity> {
