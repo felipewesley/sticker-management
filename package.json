@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fwc-2022-sticker-management/sticker-management-api.git"
+    "url": "git+https://github.com/felipewesley/sticker-management.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fwc-2022-sticker-management/sticker-management-api/issues"
+    "url": "https://github.com/felipewesley/sticker-management/issues"
   },
-  "homepage": "https://github.com/fwc-2022-sticker-management/sticker-management-api#readme",
+  "homepage": "https://github.com/felipewesley/sticker-management#readme",
   "dependencies": {
     "dotenv": "^16.0.2",
     "express": "^4.18.1"
