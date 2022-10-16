@@ -1,6 +1,7 @@
 import { Express } from "express";
 
 import { CountryControllerStartup } from "../controllers/country/startup";
+import { PlayerControllerStartup } from "../controllers/player/startup";
 import { StadiumControllerStartup } from "../controllers/stadium/startup";
 
 /**
@@ -30,6 +31,12 @@ export class AppStartup {
         // ----------------------------------------------------------------------------------------------------
 
         this.client.use(StadiumControllerStartup.basePath, StadiumControllerStartup.routes);
+
+        // ----------------------------------------------------------------------------------------------------
+        // @ Player controller routes
+        // ----------------------------------------------------------------------------------------------------
+
+        this.client.use(PlayerControllerStartup.basePath, PlayerControllerStartup.routes);
     }
 
 }
