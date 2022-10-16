@@ -3,6 +3,7 @@ import { IPlayerService } from "../../common/domain/services/player/player-servi
 import { IPlayerDetailModel, PlayerDetailModel } from "../../domain/models/player/player-detail.model";
 import { IPlayerRepository } from "../../common/domain/repositories/player/player-repository.interface";
 import { ICountryRepository } from "../../common/domain/repositories/country/country-repository.interface";
+import { PlayerPositionNameEnum } from "../../domain/enums/player/player-position-name.enum";
 
 /**
  * ### Stadium Service
@@ -36,10 +37,11 @@ export class PlayerService implements IPlayerService {
 
         model.id = player.id;
         model.name = player.name;
-        model.position = player.position;
+        model.position = PlayerPositionNameEnum[player.position];
         model.height = player.height;
         model.weight = player.weight;
         model.birthDate = player.birthDate;
+        model.nationalTeamDebutYear = player.nationalTeamDebutYear;
         model.country = null;
 
         if (country) {

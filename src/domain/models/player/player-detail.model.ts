@@ -2,16 +2,16 @@ import { INameable } from "../../interfaces/nameable.interface";
 import { IIdentifiable } from "../../interfaces/identifiable.interface";
 
 import { ICountryModel } from "../country/country.model";
-import { PlayerPositionEnum } from "../../enums/player/player-position.enum";
 
 export interface IPlayerDetailModel extends IIdentifiable<string>, INameable {
 
-    position: PlayerPositionEnum;
+    position: string;
     birthDate: Date;
     height: number;
     weight: number;
+    nationalTeamDebutYear: number;
     country: ICountryModel;
-    hasExtraCromo: boolean;
+    hasExtraCromo?: boolean;
 
 }
 
@@ -19,12 +19,13 @@ export class PlayerDetailModel implements IPlayerDetailModel {
 
     public id: string;
     public name: string;
-    public position: PlayerPositionEnum;
+    public position: string;
     public birthDate: Date;
     public height: number;
     public weight: number;
     public country: ICountryModel;
-    public hasExtraCromo: boolean;
+    public nationalTeamDebutYear: number;
+    public hasExtraCromo?: boolean;
 
     constructor() { }
 
