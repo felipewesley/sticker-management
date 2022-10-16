@@ -1,5 +1,7 @@
+import { Month } from "../common/types/enums/month.enum";
 import { DatabaseSchema } from "../domain/database/database.schema";
 import { CountryEnum } from "../domain/enums/country/country.enum";
+import { PlayerPositionEnum } from "../domain/enums/player/player-position.enum";
 
 /**
  * ### Mock Database
@@ -336,6 +338,24 @@ export const DATABASE: DatabaseSchema = {
     // @ Players
     //----------------------------------------------------------------------------------------------------
 
-    players: []
+    players: [
+
+        // ==================================================
+        // >>> Brazil
+        // ==================================================
+        
+        {
+            id: 'BRA3',
+            name: 'Alisson',
+            birthDate: new Date(1992, Month.October, 2),
+            hasExtraCromo: false,
+            nationalTeamDebutYear: 2015,
+            height: 1.91,
+            weight: 91,
+            position: PlayerPositionEnum.Goalkeeper,
+            countryId: CountryEnum.Brazil
+        }
+
+    ]
 
 }
