@@ -7,10 +7,10 @@ export interface PlayerEntity {
     name: string;
     position: PlayerPositionEnum;
     birthDate: Date;
-    nationalTeamDebutDate: Date;
+    nationalTeamDebutYear: number;
     height: number;
     weight: number;
     countryId: CountryEnum;
-    hasExtraCromo: boolean;
+    hasExtraCromo?: boolean;
 
 }
