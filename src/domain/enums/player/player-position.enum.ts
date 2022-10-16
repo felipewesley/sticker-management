@@ -1,3 +1,8 @@
+/**
+ * ### Player Position Enum
+ * 
+ * @enum PlayerPositionEnum
+ */
 export enum PlayerPositionEnum {
 
     Goalkeeper = 1,
