@@ -4,6 +4,7 @@
 
 * [Sobre](#about)
 * [Exemplos](#example)
+* [App :computer:](#demo)
 * [Métodos](#methods)
 * [Tecnologias e recursos](#technologies)
 * [Deixe o like :star:](#like)
@@ -47,6 +48,16 @@ Você obterá uma resposta parecida com esta:
 	"finalMatch": true
 }
 ```
+
+<div id='demo'/> &nbsp;
+
+## :pushpin: App (demo)
+
+Também foi implementada uma aplicação (visual) para demonstração de utilização deste serviço.
+> Desenvolvida com Angular + Angular Material.
+
+- Veja o [repositório](https://github.com/felipewesley/fwc-2022-sticker-viewer);
+- Veja a [demo](https://felipewesley.github.io/fwc-2022-sticker-viewer/#/).
 
 <div id='methods'/> &nbsp;
 
