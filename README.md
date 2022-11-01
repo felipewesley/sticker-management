@@ -28,7 +28,7 @@ Abaixo seguem alguns exemplos.
 
 ## :pushpin: Exemplo
 
-- [x] Fazendo uma chamada para, por exemplo, visualizar detalhes de um estádio ([demo](https://sticker-management-api.herokuapp.com/stadium/FWC16)):
+- [x] Fazendo uma chamada para, por exemplo, visualizar detalhes de um estádio ([demo - chamada API](https://sticker-management-api.herokuapp.com/stadium/FWC16)):
 
 ```http
 GET /stadium/FWC16 HTTP/1.1
@@ -163,6 +163,8 @@ Acerca destas tecnologias, alguns recursos/conceitos foram utilizados. Dentre el
 - [x] Abstração de tipos de resposta através de interfaces e classes;
 - [x] Camada de domínio isolada contendo os modelos de negócio da solução;
 - [x] Configuração de ambiente de deploy através da utilização de pipelines, integrado aos environments do GitHub;
+- [x] Aprendizado do Markdown para desenvolvimento deste README elegante :rofl:;
+- [x] Modelo proposto pelo W3C para apresentação de recursos no modelo HTTP (modelo este utilizado nesta documentação).
 
 <div id='like'/> &nbsp;
 
